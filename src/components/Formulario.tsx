@@ -20,8 +20,8 @@ export default function Formulario(props: FormularioProps) {
       <Entrada texto="Nome" valor={nome} valorMudou={setNome} />
       <Entrada texto="Idade" tipo="number" valor={idade} valorMudou={setIdade} />
       <div className="mt-7 flex justify-end">
-        <Botao onClick={() => props.clienteMudou?.(new Cliente(nome, +idade, id)) } className="mr-2" cor="blue" >{id ? "alterar" : "salvar"}</Botao>
-        <Botao onClick={props.cancelado} cor="red" >Cancelar</Botao>
+        <Botao onClick={() => props.clienteMudou?.(new Cliente(nome, +idade, id)) } className="mr-2" >{id ? "alterar" : "salvar"}</Botao>
+        <Botao onClick={props.cancelado} >Cancelar</Botao>
       </div>
     </div>
   );
